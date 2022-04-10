@@ -28,6 +28,14 @@ public class ValidationInfo {
         this(valid, () -> message);
     }
 
+    /**
+     * Creates a new {@link ValidationInfo}. You can also use the {@link #valid()}
+     * or {@link #invalid(String)} function to create a new info object.
+     *
+     * @param valid   true, if the validation process was successful
+     * @param message A detailed message if the validation failed. If the validation
+     *                was successful the message usually is not necessary.
+     */
     public ValidationInfo(boolean valid, Supplier<String> message) {
         this.valid = valid;
         this.message = Objects.requireNonNullElse(message, NO_MESSAGE);
@@ -53,6 +61,7 @@ public class ValidationInfo {
      * You also can add a message but this is usually not necessary if a
      * validation was successful.
      *
+     * @param message A detailed message of the validation process
      * @return A new {@link ValidationInfo} which indicates that the validation
      * process was successful
      */
@@ -66,6 +75,7 @@ public class ValidationInfo {
      * You also can add a message but this is usually not necessary if a
      * validation was successful.
      *
+     * @param message A detailed message of the validation process
      * @return A new {@link ValidationInfo} which indicates that the validation
      * process was successful
      */

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * The {@link Validator} helps to group, chain and execute {@link ValidationInstruction}s.
- * <hr></hr>
+ * <hr>
  * Example:
  * <pre>{@code
  * public ValidationResult validate(){
